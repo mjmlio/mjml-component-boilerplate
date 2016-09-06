@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint components"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +17,7 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.11.6",
-    "eslint": "^3.2.2",
+    "eslint": "^3.4.0",
     "eslint-config-airbnb": "^10.0.0",
     "eslint-plugin-import": "^1.13.0",
     "eslint-plugin-jsx-a11y": "^2.1.0",
@@ -29,6 +29,12 @@
   },
   "dependencies": {
     "lodash": "^4.15.0",
-    "mjml": "^2.3.2"
+    "mjml": "^2.3.2",
+    "mjml-column": "^2.0.10",
+    "mjml-core": "^2.3.2",
+    "mjml-image": "^2.0.10",
+    "mjml-section": "^2.0.10",
+    "mjml-text": "^2.0.9",
+    "react": "^15.3.1"
   }
 }
