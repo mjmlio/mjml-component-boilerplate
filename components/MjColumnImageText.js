@@ -8,9 +8,9 @@ import Text from 'mjml-text'
 
 // Tag Name
 const tagName = 'mj-column-image-text'
-// List of parent tag
+// List of parent tags
 const parentTag = ['mj-container']
-// If false it can contains MJML, if true it can contains only plain HTML
+// If false, the component can contain MJML; if true, it can contain only plain HTML
 const endingTag = false
 const defaultMJMLDefinition = {
   content: '',
@@ -31,7 +31,7 @@ class ColumnImageText extends Component {
     const { mjAttribute } = this.props
 
     return (
-      <Column width="50%" padding="0" key="image">
+      <Column key="image">
         <Image padding={mjAttribute('image-padding')} width={mjAttribute('image-width')} src={mjAttribute('image-src')} />
       </Column>
     )
@@ -41,7 +41,7 @@ class ColumnImageText extends Component {
     const { mjAttribute } = this.props
 
     return (
-      <Column width="50%" padding="0" key="content">
+      <Column key="content">
         <Text font-size={mjAttribute('font-size')} color={mjAttribute('color')}>
           { mjAttribute('text') }
         </Text>
@@ -58,6 +58,7 @@ class ColumnImageText extends Component {
         { mjAttribute('direction') == "right" ? reverse(columns) : columns }
       </Section>
     )
+
   }
 
 }
