@@ -1,0 +1,19 @@
+<mjml>
+  <mj-body>
+      <mj-container>
+        <mj-section>
+          <mj-column>
+            <mj-image src="https://mjml.io/assets/img/logo-small.png" />
+          </mj-column>
+          <mj-column>
+            <mj-text color="blue" font-size="10px">
+                my super nice component
+            </mj-text>
+          </mj-column>
+        </mj-section>
+        <!--
+        <mj-column-image-text image-src="https://mjml.io/assets/img/logo-small.png" text="my super nice component" />
+      </mj-container>
+    -->
+  </mj-body>
+</mjml>
