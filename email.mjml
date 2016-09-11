@@ -1,0 +1,17 @@
+<mjml>
+  <mj-body>
+    <mj-container>
+
+      <mj-column-image-text
+        text="This is a test"
+        image-src="https://placehold.it/200x50"
+        direction="left"
+      />
+
+      <mj-section>
+        <mj-text>flkjsdflks</mj-text>
+      </mj-section>
+
+    </mj-container>
+  </mj-body>
+</mjml>

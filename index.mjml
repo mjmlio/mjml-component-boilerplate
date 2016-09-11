@@ -11,9 +11,11 @@
             </mj-text>
           </mj-column>
         </mj-section>
-        <!--
+
+        <!-- uncomment if you want to test the already created component
         <mj-column-image-text image-src="https://mjml.io/assets/img/logo-small.png" text="my super nice component" />
-      </mj-container>
-    -->
+        -->
+
+    </mj-container>
   </mj-body>
 </mjml>
