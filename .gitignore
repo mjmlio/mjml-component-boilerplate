@@ -1,5 +1,5 @@
 .DS_Store
 *.log
-lib
+lib/**.js
 index.html
 node_modules
