@@ -1,20 +1,26 @@
-import babel from 'gulp-babel'
-import newer from 'gulp-newer'
 import gulp from 'gulp'
+import babel from 'gulp-babel'
+import watch from 'gulp-watch'
+import rename from 'gulp-rename'
 import path from 'path'
-import through from 'through2'
+import { exec } from 'child_process'
 
-const COMPONENTS_PATH = path.resolve(__dirname, './components')
-const OUTPUT_PATH = path.resolve(__dirname, './lib')
-
-gulp.task('build', () => {
-  return gulp.src(`${COMPONENTS_PATH}/**.js`)
-    .pipe(through.obj((file, encoding, callback) => {
-      file._path = file.path
-      file.path = path.join(OUTPUT_PATH, path.parse(file._path).base)
-      callback(null, file)
-    }))
-    .pipe(newer(COMPONENTS_PATH))
+const compile = () => {
+  gulp.src('components/**.js')
     .pipe(babel())
-    .pipe(gulp.dest(COMPONENTS_PATH))
+    .pipe(gulp.dest('lib'))
+    .on('end', () => exec(
+      './node_modules/.bin/mjml index.mjml',
+      () => console.log('> MJML compilation finished'))
+    )
+}
+
+gulp.task('build', compile)
+
+gulp.task('watch', () => {
+  compile()
+  return watch([
+    'components/**.js',
+    'index.mjml',
+  ], compile)
 })
