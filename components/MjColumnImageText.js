@@ -54,7 +54,7 @@ class ColumnImageText extends Component {
     const columns = [this.renderImage(), this.renderContent()]
 
     return (
-      <Section>
+      <Section {...this.props}>
         { mjAttribute('direction') == "right" ? reverse(columns) : columns }
       </Section>
     )
