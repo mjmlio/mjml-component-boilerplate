@@ -3,7 +3,7 @@
       <mj-container>
         <mj-section>
           <mj-column>
-            <mj-image src="https://mjml.io/assets/img/logo-small.png" />
+            <mj-image src="https://mjml.io/assets/img/logo-small.png" width="100%" />
           </mj-column>
           <mj-column>
             <mj-text color="blue" font-size="10px">
