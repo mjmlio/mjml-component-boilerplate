@@ -28,16 +28,16 @@
     "gulp-newer": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-watch": "^4.3.9",
-    "mjml": "^2.3.3"
+    "mjml": "^3.1.1"
   },
   "dependencies": {
     "lodash": "^4.15.0",
-    "mjml": "^2.3.2",
-    "mjml-column": "^2.0.10",
-    "mjml-core": "^2.3.2",
-    "mjml-image": "^2.0.10",
-    "mjml-section": "^2.0.10",
-    "mjml-text": "^2.0.9",
+    "mjml": "^3.1.1",
+    "mjml-column": "^3.1.1",
+    "mjml-core": "^3.1.1",
+    "mjml-image": "^3.1.1",
+    "mjml-section": "^3.1.1",
+    "mjml-text": "^3.1.1",
     "react": "^15.3.1"
   }
 }
