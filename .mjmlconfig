@@ -1,5 +1,5 @@
 {
   "packages": [
-    "/home/meri/git/mjml-component-boilerplate/lib/MjColumnImageText.js"
+    "./lib/MjColumnImageText.js"
   ]
 }

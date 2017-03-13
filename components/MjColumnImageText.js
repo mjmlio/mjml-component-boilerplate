@@ -15,12 +15,13 @@ const endingTag = false
 const defaultMJMLDefinition = {
   content: '',
   attributes: {
-    direction: 'left',
-    color: 'blue',
+    'direction': 'left',
+    'color': 'blue',
     'font-size': '10px',
     'image-padding': 0,
     'image-src': null,
     'image-width': null,
+    'column-width': '50%',
   },
 }
 
@@ -31,7 +32,7 @@ class ColumnImageText extends Component {
     const { mjAttribute } = this.props
 
     return (
-      <Column key="image">
+      <Column key="image" width={mjAttribute('column-width')}>
         <Image
           padding={mjAttribute('image-padding')}
           width={mjAttribute('image-width')}
@@ -45,7 +46,7 @@ class ColumnImageText extends Component {
     const { mjAttribute } = this.props
 
     return (
-      <Column key="content">
+      <Column key="content" width={mjAttribute('column-width')}>
         <Text font-size={mjAttribute('font-size')} color={mjAttribute('color')}>
           { mjAttribute('text') }
         </Text>
