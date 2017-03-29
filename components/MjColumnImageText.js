@@ -22,6 +22,7 @@ const defaultMJMLDefinition = {
     'image-src': null,
     'image-width': null,
     'column-width': '50%',
+    'text': '',
   },
 }
 
