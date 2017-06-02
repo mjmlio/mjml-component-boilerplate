@@ -7,12 +7,12 @@ import path from 'path'
 import { exec } from 'child_process'
 
 const compile = () => {
-  gulp.src('components/**.js')
+  gulp.src(path.normalize('components/**.js'))
     .pipe(babel())
     .on('error', gutil.log)
     .pipe(gulp.dest('lib'))
     .on('end', () => exec(
-      './node_modules/.bin/mjml index.mjml',
+      `${path.normalize('./node_modules/.bin/mjml')} index.mjml`,
       (error, stdout) => {
         console.log(stdout)
         console.log('> MJML compilation finished')
@@ -25,7 +25,7 @@ gulp.task('build', compile)
 gulp.task('watch', () => {
   compile()
   return watch([
-    'components/**.js',
-    'index.mjml',
+    path.normalize('components/**.js'),
+    path.normalize('index.mjml'),
   ], compile)
 })
