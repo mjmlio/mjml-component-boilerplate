@@ -1,21 +1,37 @@
 <mjml>
   <mj-body>
-      <mj-container>
-        <mj-section>
-          <mj-column>
-            <mj-image src="https://mjml.io/assets/img/logo-small.png" width="100%" />
-          </mj-column>
-          <mj-column>
-            <mj-text color="blue" font-size="10px">
-                my super nice component
-            </mj-text>
-          </mj-column>
-        </mj-section>
+    <mj-section>
 
-        <!-- uncomment if you want to test the already created component
-        <mj-column-image-text image-src="https://mjml.io/assets/img/logo-small.png" text="my super nice component" />
-        -->
 
-    </mj-container>
+      <mj-column>
+        <mj-image src="https://mjml.io/assets/img/logo-small.png" width="100%" />
+          <mj-basic-component color="pink">
+          Coin
+        </mj-basic-component>
+      </mj-column>
+      
+
+
+      <mj-image-text
+        background-color="green",
+        image-position="right",
+        image-src="https://mjml.io/assets/img/mjml-logo.png",
+        image-width="100px",
+        column-width="50%",
+      >
+        Mjml rules
+      </mj-image-text>
+      
+
+    </mj-section>
+
+
+    <mj-layout>
+      <mj-text color="blue" font-size="10px">
+          my super nice component
+      </mj-text>
+    </mj-layout>
+    
+
   </mj-body>
 </mjml>
