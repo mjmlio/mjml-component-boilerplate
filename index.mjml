@@ -2,16 +2,16 @@
   <mj-body>
     <mj-section>
 
-
+      <!-- uncomment if you want to test the already created component
       <mj-column>
         <mj-image src="https://mjml.io/assets/img/logo-small.png" width="100%" />
           <mj-basic-component color="pink">
           Coin
         </mj-basic-component>
       </mj-column>
-      
+      -->
 
-
+      <!-- uncomment if you want to test the already created component
       <mj-image-text
         background-color="green",
         image-position="right",
@@ -21,17 +21,17 @@
       >
         Mjml rules
       </mj-image-text>
-      
+      -->
 
     </mj-section>
 
-
+    <!-- uncomment if you want to test the already created component
     <mj-layout>
       <mj-text color="blue" font-size="10px">
           my super nice component
       </mj-text>
     </mj-layout>
-    
+    -->
 
   </mj-body>
 </mjml>
