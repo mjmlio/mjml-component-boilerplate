@@ -77,6 +77,10 @@ export default class MjLayout extends BodyComponent {
   }
 
   render() {
+    /*
+      Components are supposed to return html. If we want to return mjml so as to
+      use existing components, we need to process it manually using this.renderMJML()
+    */
     return this.renderMJML(`
 			<mj-section css-class="mj-layout mj-layout-${this.cssId}">
 				<mj-column background-color="${this.getAttribute('background-color')}">

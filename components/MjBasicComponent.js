@@ -36,11 +36,19 @@ export default class MjBasicComponent extends BodyComponent {
     It must return an html string.
   */
   render() {
-    // The recommended way to access the tag's attributes is with this.getAttribute()
     return `
-      <div style="font-size:${this.getAttribute('font-size')};color:${this.getAttribute('stars-color')};">
+      <div
+        ${this.htmlAttributes({ // this.htmlAttributes() is the recommended way to pass attributes to html tags
+          'font-size': this.getAttribute('font-size'), // this.getAttribute(attrName) is the recommended way to access the attributes our component received in the mjml
+          color: this.getAttribute('stars-color')
+        })}
+      >
         <span>★</span>
-        <span style="color:${this.getAttribute('color')};">
+        <span
+          ${this.htmlAttributes({
+            color: this.getAttribute('color')
+          })}
+        >
           ${this.getContent()}
         </span>
         <span>★</span>

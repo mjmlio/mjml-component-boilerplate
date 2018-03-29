@@ -7,8 +7,13 @@ registerDependencies({
   'mj-section': ['mj-image-text']
 })
 
-export default class MjImageText extends BodyComponent {
+export default class MjColumnImageText extends BodyComponent {
+  static endingTag = true
 
+  /*
+    We could obviously handle all the attributes accepted for Mj Section,
+    Column, Image and Text, but let's keep it simple for this example.
+  */
   static allowedAttributes = {
     'background-color': 'color',
     'image-position': 'enum(left,right)',
@@ -23,7 +28,7 @@ export default class MjImageText extends BodyComponent {
   static defaultAttributes = {
     'background-color': null,
     'image-position': 'right',
-    'color': 'blue',
+    'color': 'white',
     'font-size': '10px',
     'image-padding': 0,
     'image-src': null,
@@ -33,47 +38,56 @@ export default class MjImageText extends BodyComponent {
 
   renderImage() {
     return `
-      <mj-image
+      <mj-column
         ${this.htmlAttributes({
-          'image-padding': this.getAttribute('image-padding'),
-          'image-src': this.getAttribute('image-src'),
-          'image-width': this.getAttribute('image-width'),
+          width: this.getAttribute('column-width'),
+          'background-color': this.getAttribute('background-color')
         })}
       >
-      </mj-image>
+        <mj-image
+          ${this.htmlAttributes({
+            padding: this.getAttribute('image-padding'),
+            src: this.getAttribute('image-src'),
+            width: this.getAttribute('image-width'),
+          })}
+        >
+        </mj-image>
+    </mj-column>
     `
   }
 
   renderText() {
     return `
-      <mj-text
+      <mj-column
         ${this.htmlAttributes({
-          color: this.getAttribute('color'),
-          'font-size': this.getAttribute('font-size'),
-        })}
-      >
-        ${this.getContent()}
-      </mj-text>
-    `
-  }
-
-  render() {
-    /*
-      Components are supposed to return html. If we want to return mjml so as to
-      use existing components, we need to process it manually using this.renderMJML()
-    */
-    const content = [this.renderText(), this.renderImage()]
-    const orderedContent = this.getAttribute('image-position') === 'right' ? content : reverse(content)
-
-    return this.renderMJML(`
-			<mj-column
-        ${this.htmlAttributes({ // This is the recommended way to pass attributes to a tag
           width: this.getAttribute('column-width'),
           'background-color': this.getAttribute('background-color')
         })}
       >
+        <mj-text
+          ${this.htmlAttributes({
+            color: this.getAttribute('color'),
+            'font-size': this.getAttribute('font-size'),
+          })}
+        >
+          ${this.getContent()}
+        </mj-text>
+      </mj-column>
+    `
+  }
+
+  render() {
+    const content = [this.renderText(), this.renderImage()]
+    const orderedContent = this.getAttribute('image-position') === 'right' ? content : reverse(content)
+
+    return this.renderMJML(`
+			<mj-section
+        ${this.htmlAttributes({
+          'background-color': this.getAttribute('background-color')
+        })}
+      >
         ${orderedContent}
-			</mj-column>
+			</mj-section>
 		`)
   }
 }

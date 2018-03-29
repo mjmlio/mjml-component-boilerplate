@@ -1,29 +1,30 @@
 <mjml>
   <mj-body>
-    <mj-section>
 
-      <!-- uncomment if you want to test the already created component
+    <!-- uncomment if you want to test the already created component
+    <mj-section>
       <mj-column>
         <mj-image src="https://mjml.io/assets/img/logo-small.png" width="100%" />
           <mj-basic-component color="pink">
           Coin
         </mj-basic-component>
       </mj-column>
-      -->
-
-      <!-- uncomment if you want to test the already created component
-      <mj-image-text
-        background-color="green",
-        image-position="right",
-        image-src="https://mjml.io/assets/img/mjml-logo.png",
-        image-width="100px",
-        column-width="50%",
-      >
-        Mjml rules
-      </mj-image-text>
-      -->
-
     </mj-section>
+    -->
+
+
+    <!-- uncomment if you want to test the already created component
+    <mj-column-image-text
+      background-color="#DD685B"
+      image-src="https://mjml.io/assets/img/mjml-logo.png"
+      image-width="100px"
+      column-width="50%"
+      font-size="24px"
+      image-position="left"
+    >
+      Mjml rules
+    </mj-column-image-text>
+    -->
 
     <!-- uncomment if you want to test the already created component
     <mj-layout>
