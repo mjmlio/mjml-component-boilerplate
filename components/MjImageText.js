@@ -7,7 +7,7 @@ registerDependencies({
   'mj-section': ['mj-image-text']
 })
 
-export default class MjColumnImageText extends BodyComponent {
+export default class MjImageText extends BodyComponent {
   static endingTag = true
 
   /*
