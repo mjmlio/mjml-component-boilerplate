@@ -9,10 +9,10 @@ import { exec } from 'child_process'
 import mjml2html from 'mjml'
 import { registerComponent } from 'mjml-core'
 import MjLayout from './components/MjLayout'
-import MjColumnImageText from './components/MjColumnImageText'
+import MjImageText from './components/MjImageText'
 import MjBasicComponent from './components/MjBasicComponent'
 registerComponent(MjBasicComponent)
-registerComponent(MjColumnImageText)
+registerComponent(MjImageText)
 registerComponent(MjLayout)
 
 // Import and register your components here

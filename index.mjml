@@ -1,7 +1,7 @@
 <mjml>
   <mj-body>
 
-    <!-- uncomment if you want to test the already created component
+    <!-- Remove this comment to test the mj-basic-component component
     <mj-section>
       <mj-column>
         <mj-image src="https://mjml.io/assets/img/logo-small.png" width="100%" />
@@ -12,24 +12,22 @@
     </mj-section>
     -->
 
-
-    <!-- uncomment if you want to test the already created component
-    <mj-column-image-text
+    <!-- Remove this comment to test the mj-image-text component
+    <mj-image-text
       background-color="#DD685B"
       image-src="https://mjml.io/assets/img/mjml-logo.png"
       image-width="100px"
-      column-width="50%"
       font-size="24px"
       image-position="left"
     >
-      Mjml rules
-    </mj-column-image-text>
+      MJML rules!
+    </mj-image-text>
     -->
 
-    <!-- uncomment if you want to test the already created component
+    <!-- Remove the comment to test the mj-layout component
     <mj-layout>
       <mj-text color="blue" font-size="10px">
-          my super nice component
+          A super nice layout component
       </mj-text>
     </mj-layout>
     -->
