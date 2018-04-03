@@ -21,14 +21,16 @@ export default class MjBasicComponent extends BodyComponent {
   static allowedAttributes = {
     'stars-color': 'color',
     'color': 'color',
-    'font-size': 'unit(px)'
+    'font-size': 'unit(px)',
+    'align': 'enum(left,right,center)',
   }
 
   // What the name suggests. Fallback value for this.getAttribute('attribute-name').
   static defaultAttributes = {
     'stars-color': 'yellow',
     color: 'black',
-    'font-size': '12px'
+    'font-size': '12px',
+    'align': 'center',
   }
 
   // This functions allows to define styles that can be used when rendering (see render() below)
@@ -37,6 +39,10 @@ export default class MjBasicComponent extends BodyComponent {
       wrapperDiv: {
         color: this.getAttribute('stars-color'), // this.getAttribute(attrName) is the recommended way to access the attributes our component received in the mjml
         'font-size': this.getAttribute('font-size'),
+      },
+      contentP: {
+        'text-align': this.getAttribute('align'),
+        'font-size': '20px'
       },
       contentSpan: {
         color: this.getAttribute('color')
@@ -56,6 +62,9 @@ export default class MjBasicComponent extends BodyComponent {
           style: 'wrapperDiv' // This will add the 'wrapperDiv' attributes from getStyles() as inline style
         })}
       >
+      <p ${this.htmlAttributes({
+        style: 'contentP' // This will add the 'contentP' attributes from getStyles() as inline style
+      })}>
         <span>★</span>
         <span
           ${this.htmlAttributes({
@@ -65,6 +74,7 @@ export default class MjBasicComponent extends BodyComponent {
           ${this.getContent()}
         </span>
         <span>★</span>
+      </p>
       </div>
 		`
   }

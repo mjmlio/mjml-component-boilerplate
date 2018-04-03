@@ -1,36 +1,26 @@
 <mjml>
   <mj-body>
 
-    <!-- Remove this comment to test the mj-basic-component component
+    <!-- The first component, mj-basic-component renders as a column child -->
     <mj-section>
       <mj-column>
-        <mj-image src="https://mjml.io/assets/img/logo-small.png" width="100%" />
         <mj-basic-component color="green">
           I'm among stars
         </mj-basic-component>
       </mj-column>
     </mj-section>
-    -->
 
-    <!-- Remove this comment to test the mj-image-text component
-    <mj-image-text
-      background-color="#DD685B"
-      image-src="https://mjml.io/assets/img/mjml-logo.png"
-      image-width="100px"
-      font-size="24px"
-      image-position="left"
-    >
+    <!-- The second component, mj-image-text renders as a section -->
+    <mj-image-text background-color="#DD685B" image-src="https://mjml.io/assets/img/mjml-logo.png" image-width="100px" font-size="24px" image-position="left">
       MJML rules!
     </mj-image-text>
-    -->
 
-    <!-- Remove the comment to test the mj-layout component
+    <!-- The third component, mj-layout, also renders as a section -->
     <mj-layout>
       <mj-text color="blue" font-size="10px">
-          A super nice layout component
+        A super nice layout component
       </mj-text>
     </mj-layout>
-    -->
 
   </mj-body>
 </mjml>
