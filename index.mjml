@@ -5,8 +5,8 @@
     <mj-section>
       <mj-column>
         <mj-image src="https://mjml.io/assets/img/logo-small.png" width="100%" />
-          <mj-basic-component color="pink">
-          Coin
+        <mj-basic-component color="green">
+          I'm among stars
         </mj-basic-component>
       </mj-column>
     </mj-section>
