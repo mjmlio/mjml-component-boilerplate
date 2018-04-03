@@ -7,9 +7,5 @@
     "space-before-function-paren": 0,
     "semi": 0,
 
-    "react/require-extension": "off",
-    "react/jsx-filename-extension": 0,
-    "react/prop-types": 0,
-
   },
 }

@@ -1,21 +1,36 @@
 <mjml>
   <mj-body>
-      <mj-container>
-        <mj-section>
-          <mj-column>
-            <mj-image src="https://mjml.io/assets/img/logo-small.png" width="100%" />
-          </mj-column>
-          <mj-column>
-            <mj-text color="blue" font-size="10px">
-                my super nice component
-            </mj-text>
-          </mj-column>
-        </mj-section>
 
-        <!-- uncomment if you want to test the already created component
-        <mj-column-image-text image-src="https://mjml.io/assets/img/logo-small.png" text="my super nice component" />
-        -->
+    <!-- Remove this comment to test the mj-basic-component component
+    <mj-section>
+      <mj-column>
+        <mj-image src="https://mjml.io/assets/img/logo-small.png" width="100%" />
+        <mj-basic-component color="green">
+          I'm among stars
+        </mj-basic-component>
+      </mj-column>
+    </mj-section>
+    -->
 
-    </mj-container>
+    <!-- Remove this comment to test the mj-image-text component
+    <mj-image-text
+      background-color="#DD685B"
+      image-src="https://mjml.io/assets/img/mjml-logo.png"
+      image-width="100px"
+      font-size="24px"
+      image-position="left"
+    >
+      MJML rules!
+    </mj-image-text>
+    -->
+
+    <!-- Remove the comment to test the mj-layout component
+    <mj-layout>
+      <mj-text color="blue" font-size="10px">
+          A super nice layout component
+      </mj-text>
+    </mj-layout>
+    -->
+
   </mj-body>
 </mjml>
