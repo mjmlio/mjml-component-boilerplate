@@ -1,5 +1,8 @@
 {
-  "extends": "airbnb",
+  "extends": [
+    "eslint-config-airbnb-base",
+    "eslint-config-airbnb-base/rules/strict"
+  ],
   "parser": "babel-eslint",
   "rules": {
 
