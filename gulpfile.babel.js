@@ -26,7 +26,10 @@ const compile = () => {
       fs.readFile(path.normalize('./index.mjml'), 'utf8', (err, data) => {
         if (err) throw err
         const result = mjml2html(data)
-        fs.writeFile(path.normalize('./index.html'), result.html)
+        fs.writeFile(
+          path.normalize('./index.html'),
+          result.html, (err => console.error)
+        )
       })
     })
 }

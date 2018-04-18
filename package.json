@@ -9,7 +9,7 @@
     "lint": "eslint components"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
@@ -26,9 +26,6 @@
     "gulp-newer": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-watch": "^4.3.9",
-    "mjml": "^3.1.1"
-  },
-  "dependencies": {
     "lodash": "^4.15.0",
     "mjml": "^4.0.0"
   }
