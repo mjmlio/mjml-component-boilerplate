@@ -1,8 +1,7 @@
 import gulp from 'gulp'
 import babel from 'gulp-babel'
 import watch from 'gulp-watch'
-import rename from 'gulp-rename'
-import gutil from 'gulp-util'
+import log from 'fancy-log'
 import fs from 'fs'
 import path from 'path'
 import { exec } from 'child_process'
@@ -20,13 +19,13 @@ registerComponent(MjLayout)
 const compile = () => {
   gulp.src(path.normalize('components/**.js'))
     .pipe(babel())
-    .on('error', gutil.log)
+    .on('error', log)
     .pipe(gulp.dest('lib'))
     .on('end', () => {
       fs.readFile(path.normalize('./index.mjml'), 'utf8', (err, data) => {
         if (err) throw err
         const result = mjml2html(data)
-        fs.writeFile(path.normalize('./index.html'), result.html)
+        fs.writeFileSync(path.normalize('./index.html'), result.html)
       })
     })
 }
