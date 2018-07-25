@@ -35,7 +35,7 @@ gulp.task('build', compile)
 gulp.task('watch', () => {
   compile()
   return watch([
-    path.normalize('components/**.js'),
+    path.normalize('components/*.js'),
     path.normalize('index.mjml'),
   ], compile)
 })
