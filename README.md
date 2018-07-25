@@ -22,7 +22,7 @@ A step-by-step tutorial is available [here](https://medium.com/mjml-making-respo
 ## Later use of your component
 
 ### In Node.js
-```
+```js
 import mjml2html from 'mjml'
 import { registerComponent } from 'mjml-core'
 import MyComponent from './components/MyComponent'
