@@ -4,24 +4,32 @@ import watch from 'gulp-watch'
 import log from 'fancy-log'
 import fs from 'fs'
 import path from 'path'
-import { exec } from 'child_process'
 import mjml2html from 'mjml'
 import { registerComponent } from 'mjml-core'
-import MjLayout from './components/MjLayout'
-import MjImageText from './components/MjImageText'
-import MjBasicComponent from './components/MjBasicComponent'
-registerComponent(MjBasicComponent)
-registerComponent(MjImageText)
-registerComponent(MjLayout)
 
-// Import and register your components here
+const walkSync = (dir, filelist = []) => {
+  fs.readdirSync(dir).forEach(file => {
+    filelist = fs.statSync(path.join(dir, file)).isDirectory()
+      ? walkSync(path.join(dir, file), filelist)
+      : filelist.concat(path.join(dir, file))
+  })
+ return filelist
+}
+
+const watchedComponents = walkSync('./components')
 
 const compile = () => {
-  gulp.src(path.normalize('components/**.js'))
+  gulp.src(path.normalize('components/**/*.js'))
     .pipe(babel())
     .on('error', log)
     .pipe(gulp.dest('lib'))
     .on('end', () => {
+      watchedComponents.forEach(compPath => {
+        const fullPath = path.join(process.cwd(), compPath.replace(/^components/, 'lib'))
+        delete require.cache[fullPath]
+        registerComponent(require(fullPath).default)
+      })
+
       fs.readFile(path.normalize('./index.mjml'), 'utf8', (err, data) => {
         if (err) throw err
         const result = mjml2html(data)
@@ -35,7 +43,7 @@ gulp.task('build', compile)
 gulp.task('watch', () => {
   compile()
   return watch([
-    path.normalize('components/*.js'),
+    path.normalize('components/**/*.js'),
     path.normalize('index.mjml'),
   ], compile)
 })
