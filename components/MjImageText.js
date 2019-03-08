@@ -4,7 +4,8 @@ import { registerDependencies } from 'mjml-validator'
 import { BodyComponent } from 'mjml-core'
 registerDependencies({
   'mj-image-text': [],
-  'mj-section': ['mj-image-text']
+  'mj-body': ['mj-image-text'],
+  'mj-wrapper': ['mj-image-text'],
 })
 
 export default class MjImageText extends BodyComponent {

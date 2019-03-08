@@ -17,8 +17,9 @@ registerDependencies({
     'mj-text',
     'mj-navbar'
   ],
-  // Now tell the validator which tag sare allowed as our component's parent
-  'mj-wrapper': ['mj-layout']
+  // Now tell the validator which tags are allowed as our component's parent
+  'mj-wrapper': ['mj-layout'],
+  'mj-body': ['mj-layout'],
 })
 
 /*
