@@ -1,5 +1,7 @@
 {
   "packages": [
-    "./lib/MjColumnImageText.js"
+    "./lib/MjBasicComponent.js",
+    "./lib/MjImageText.js",
+    "./lib/MjLayout.js"
   ]
 }
