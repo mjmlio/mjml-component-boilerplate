@@ -13,13 +13,14 @@ const walkSync = (dir, filelist = []) => {
       ? walkSync(path.join(dir, file), filelist)
       : filelist.concat(path.join(dir, file))
   })
- return filelist
+  return filelist
 }
 
 const watchedComponents = walkSync('./components')
 
 const compile = () => {
-  gulp.src(path.normalize('components/**/*.js'))
+  return gulp
+    .src(path.normalize('components/**/*.js'))
     .pipe(babel())
     .on('error', log)
     .pipe(gulp.dest('lib'))
@@ -42,8 +43,5 @@ gulp.task('build', compile)
 
 gulp.task('watch', () => {
   compile()
-  return watch([
-    path.normalize('components/**/*.js'),
-    path.normalize('index.mjml'),
-  ], compile)
+  return watch([path.normalize('components/**/*.js'), path.normalize('index.mjml')], compile)
 })

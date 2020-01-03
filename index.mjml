@@ -12,7 +12,7 @@
 
     <!-- The second component, mj-image-text renders as a section -->
     <mj-image-text background-color="#DD685B" image-src="https://mjml.io/assets/img/mjml-logo.png" image-width="100px" font-size="24px" image-position="left">
-      MJML rules!
+      MJML rules! hello modified
     </mj-image-text>
 
     <!-- The third component, mj-layout, also renders as a section -->
