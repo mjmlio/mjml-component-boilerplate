@@ -28,6 +28,6 @@
   },
   "dependencies": {
     "lodash": "^4.15.0",
-    "mjml": "^4.0.0"
+    "mjml": "^4.6.3"
   }
 }
