@@ -22,8 +22,8 @@ const compile = () => {
   return gulp
     .src(path.normalize('components/**/*.js'))
     .pipe(babel({
-			presets: ['@babel/preset-env']
-		})
+      presets: ['@babel/preset-env'],
+    }))
     .on('error', log)
     .pipe(gulp.dest('lib'))
     .on('end', () => {
