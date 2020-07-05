@@ -1,4 +1,4 @@
 {
-  "presets": ["env", "stage-0"],
+  "presets": ["@babel/preset-env"],
   "plugins": ["transform-decorators-legacy"]
 }
