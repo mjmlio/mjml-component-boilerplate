@@ -1,14 +1,11 @@
 {
   "extends": [
-    "eslint-config-airbnb-base",
-    "eslint-config-airbnb-base/rules/strict"
+    "airbnb-base"
   ],
   "parser": "babel-eslint",
   "rules": {
-
     "padded-blocks": 0,
     "space-before-function-paren": 0,
-    "semi": 0,
-
-  },
+    "semi": 0
+  }
 }

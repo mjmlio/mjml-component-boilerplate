@@ -21,7 +21,9 @@ const watchedComponents = walkSync('./components')
 const compile = () => {
   return gulp
     .src(path.normalize('components/**/*.js'))
-    .pipe(babel())
+    .pipe(babel({
+      presets: ['@babel/preset-env'],
+    }))
     .on('error', log)
     .pipe(gulp.dest('lib'))
     .on('end', () => {
