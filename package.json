@@ -27,6 +27,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.15",
-    "mjml": "^4.7.0-beta.1"
+    "mjml": "^4.7.1"
   }
 }
