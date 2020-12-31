@@ -28,6 +28,12 @@ registerDependencies({
   It also introduces the two 'headStyle' functions
 */
 export default class MjLayout extends BodyComponent {
+  /* 
+    Notice we don't put "static endingTag = true" here,
+    because we want this tag's content to be parsed as mjml.
+    Examples of non-endingTags are mj-section, mj-column, etc.
+  */
+  
   constructor(initialDatas = {}) {
     super(initialDatas)
     this.cssId = Math.floor(Math.random() * 9) + 1

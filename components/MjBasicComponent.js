@@ -14,7 +14,12 @@ registerDependencies({
   It can take 3 attributes, to specify size and colors.
 */
 export default class MjBasicComponent extends BodyComponent {
-  // Tell the parser that our component won't contain other mjml tags
+  /* 
+    Tell the parser that our component won't contain other mjml tags.
+    This means any html tag inside its content will be left as it is.
+    Without this, it would be parsed as mjml content.
+    Examples of endingTags are mj-text, mj-button, mj-raw, etc.
+  */
   static endingTag = true
 
   // Tells the validator which attributes are allowed for mj-layout
