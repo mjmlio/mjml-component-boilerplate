@@ -1,26 +1,4 @@
-import { registerDependencies } from 'mjml-validator'
 import { BodyComponent } from 'mjml-core'
-
-registerDependencies({
-  // Tell the validator which tags are allowed as our component's children
-  'mj-layout': [
-    'mj-accordion',
-    'mj-button',
-    'mj-carousel',
-    'mj-divider',
-    'mj-html',
-    'mj-image',
-    'mj-raw',
-    'mj-social',
-    'mj-spacer',
-    'mj-table',
-    'mj-text',
-    'mj-navbar'
-  ],
-  // Now tell the validator which tags are allowed as our component's parent
-  'mj-wrapper': ['mj-layout'],
-  'mj-body': ['mj-layout'],
-})
 
 /*
   This component is an example of layout, which uses existing mjml components
@@ -37,6 +15,27 @@ export default class MjLayout extends BodyComponent {
   constructor(initialDatas = {}) {
     super(initialDatas)
     this.cssId = Math.floor(Math.random() * 9) + 1
+  }
+  
+  static dependencies = {
+    // Tell the validator which tags are allowed as our component's children
+    'mj-layout': [
+      'mj-accordion',
+      'mj-button',
+      'mj-carousel',
+      'mj-divider',
+      'mj-html',
+      'mj-image',
+      'mj-raw',
+      'mj-social',
+      'mj-spacer',
+      'mj-table',
+      'mj-text',
+      'mj-navbar'
+    ],
+    // Now tell the validator which tags are allowed as our component's parent
+    'mj-wrapper': ['mj-layout'],
+    'mj-body': ['mj-layout'],
   }
 
   // Tells the validator which attributes are allowed for mj-layout

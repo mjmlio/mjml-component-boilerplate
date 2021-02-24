@@ -1,13 +1,4 @@
-import { registerDependencies } from 'mjml-validator'
 import { BodyComponent } from 'mjml-core'
-
-registerDependencies({
-  // Tell the validator which tags are allowed as our component's parent
-  'mj-hero': ['mj-basic-component'],
-  'mj-column': ['mj-basic-component'],
-  // Tell the validator which tags are allowed as our component's children
-  'mj-basic-component': []
-})
 
 /*
   Our component is a (useless) simple text tag, that adds colored stars around the text.
@@ -21,6 +12,14 @@ export default class MjBasicComponent extends BodyComponent {
     Examples of endingTags are mj-text, mj-button, mj-raw, etc.
   */
   static endingTag = true
+  
+  static dependencies = {
+    // Tell the validator which tags are allowed as our component's parent
+    'mj-hero': ['mj-basic-component'],
+    'mj-column': ['mj-basic-component'],
+    // Tell the validator which tags are allowed as our component's children
+    'mj-basic-component': []
+  }
 
   // Tells the validator which attributes are allowed for mj-layout
   static allowedAttributes = {

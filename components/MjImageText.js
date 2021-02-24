@@ -1,16 +1,16 @@
 import reverse from 'lodash/reverse'
 
-import { registerDependencies } from 'mjml-validator'
 import { BodyComponent } from 'mjml-core'
-registerDependencies({
-  'mj-image-text': [],
-  'mj-body': ['mj-image-text'],
-  'mj-wrapper': ['mj-image-text'],
-})
 
 export default class MjImageText extends BodyComponent {
   static endingTag = true
 
+  static dependencies = {
+    'mj-image-text': [],
+    'mj-body': ['mj-image-text'],
+    'mj-wrapper': ['mj-image-text'],
+  }
+  
   /*
     We could obviously handle all the attributes accepted for Mj Section,
     Column, Image and Text, but let's keep it simple for this example.
