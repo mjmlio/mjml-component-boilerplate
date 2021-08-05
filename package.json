@@ -26,6 +26,7 @@
     "gulp-watch": "^5.0.1"
   },
   "dependencies": {
+    "clipboardy": "^2.3.0",
     "lodash": "^4.17.15",
     "mjml": "^4.7.1"
   }
