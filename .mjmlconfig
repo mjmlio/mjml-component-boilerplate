@@ -1,7 +1,7 @@
 {
   "packages": [
-    "./lib/MjBasicComponent.js",
-    "./lib/MjImageText.js",
-    "./lib/MjLayout.js"
+    "./lib/compponents/MjBasicComponent.js",
+    "./lib/compponents/MjImageText.js",
+    "./lib/compponents/MjLayout.js"
   ]
 }
