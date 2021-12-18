@@ -8,7 +8,7 @@ import mjml2html from 'mjml'
 import { registerComponent } from 'mjml-core'
 
 const walkSync = (dir, filelist = []) => {
-  fs.readdirSync(dir).forEach(file => {
+  fs.readdirSync(dir).forEach((file) => {
     filelist = fs.statSync(path.join(dir, file)).isDirectory()
       ? walkSync(path.join(dir, file), filelist)
       : filelist.concat(path.join(dir, file))
@@ -21,14 +21,16 @@ const watchedComponents = walkSync('./components')
 const compile = () => {
   return gulp
     .src(path.normalize('components/**/*.js'))
-    .pipe(babel({
-      presets: ['@babel/preset-env'],
-    }))
+    .pipe(
+      babel({
+        presets: ['@babel/preset-env'],
+      }),
+    )
     .on('error', log)
     .pipe(gulp.dest('lib'))
     .on('end', () => {
-      watchedComponents.forEach(compPath => {
-        const fullPath = path.join(process.cwd(), compPath.replace(/^components/, 'lib'))
+      watchedComponents.forEach((compPath) => {
+        const fullPath = path.join(process.cwd(), compPath.replace('/^components/', 'lib'))
         delete require.cache[fullPath]
         registerComponent(require(fullPath).default)
       })
