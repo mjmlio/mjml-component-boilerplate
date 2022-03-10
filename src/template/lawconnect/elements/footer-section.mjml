@@ -1,0 +1,8 @@
+<mj-section background-color="#fff" padding="0 15px 30px 15px" border-radius="0 0 8px 8px">
+  <mj-column width="480px">
+    <mj-text>
+      <p>Kind regards,<br/>@Model.FirmNameOrDefault()</p>
+      <p style="color: #0E5FE3;">T: 02-201-392-12<br/>E: thomas.anderson@morganenglish.com.au<br/>A: 23 Kent St, Sydney NSW 2000 Australia</p>
+    </mj-text>
+  </mj-column>
+</mj-section>

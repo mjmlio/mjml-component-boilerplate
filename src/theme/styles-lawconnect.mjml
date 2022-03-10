@@ -1,0 +1,18 @@
+<mj-style inline="inline">
+  /* Branding Color */
+  a, .text-primary {
+    color: #0E5FE3;
+  }
+  .text-secondary {
+    color: #0f4f6c;
+  }
+  .btn-primary {
+    background-color: #0E5FE3;
+    border-color: #0E5FE3;
+  }
+
+  .btn-align-left.btn-outline td table tbody tr td {
+    
+    border: 1px solid #0E5FE3 !important;
+  }
+</mj-style>

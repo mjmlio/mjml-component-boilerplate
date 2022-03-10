@@ -1,0 +1,14 @@
+<mj-style inline="inline">
+  /* Branding Color */
+  a, .text-primary {
+    color: #32abe2;
+  }
+  .text-secondary {
+    color: #004876;
+  }
+  .btn-wrapper,
+  .btn-primary {
+    background-color: #32abe2;
+    border-color: #32abe2;
+  }
+</mj-style>

@@ -1,0 +1,81 @@
+<mjml>
+  <mj-head>
+    <mj-title>Your invoice is ready</mj-title>
+    <mj-include path="../../partials/head-lawconnect.mjml" />
+  </mj-head>
+  <mj-include path="../../partials/body-start.mjml" />
+  <!-- Header -->
+    <mj-include path="./elements/header-section.mjml" />
+  <!-- Header -->
+  <!-- Heading -->
+    <heading text="Your invoice is ready" />
+  <!-- End of Heading -->
+  <!-- Message -->
+    <message>
+      <p>Dear <strong>{FirstName} {LastName}</strong>,</p>
+      <p>Please find below our monthly report of work undertaken between 1 May 2020 and 31 May 2020.</p>
+          <p>You will appreciate significant work has been undertaken during that period including but not limited to:</p>
+          <ol>
+            <li>Drafting offer of settlement;</li>
+            <li>Conference with you (via Zoom)</li>
+            <li>Updating your Financial Statement;</li>
+            <li>Liaising with you regarding various topics including but not limited to:-
+            <ol>
+            <li>Financial Statement;</li>
+            <li><a>Offers of settlement;</a></li>
+            <li>Mortgage repayments;</li>
+            <li>Share portfolio;<a> Letter to other side</a></li>
+            <li>Orders sought by wife; and</li>
+            <li>Injunctive relief.</li>
+            </ol>
+            </li>
+            <li>Liaising with the wife's solicitors regarding various topics including but not limited to:-
+            <ol>
+            <li>Proposed Minute of Orders;</li>
+            <li>Appointment of joint expert; and</li>
+            <li>Proposal for injunctive relief.</li>
+            </ol>
+            </li>
+            <li>Review of Court documents filed by the wife;.</li>
+            <li>Conference with you on 13 May 2020;</li>
+            <li>Filing and service of your Court documents including preparation of exhibits to your </li>
+            <li>Updating Brief to Sam Anderson;</li>
+          </ol>
+          <h4>Next Phase of Work</h4>
+          <p>I estimate my next phase of work to be as follows:</p>
+          <ol>
+          <li>Attendance at Court for your interim hearing on 31 August 2020 (say, 4 to 6 hours - C Long);</li>
+            <li>Liaison/correspondence with you and Kelly's solicitor (say, 2 to 3 hours -T.Schonell);</li>
+            <li>Administration/support staff assistance at 10% of estimate</li>
+          </ol>
+    </message>
+  <!-- End of Message -->
+
+  <!-- Balance Due -->
+  <mj-section background-color="#fff">
+  <mj-column>
+    <mj-divider border-width="1px" border-color="lightgrey" />
+    <mj-text align="center" text-transform="uppercase" font-weight="600">Balance Due:</mj-text>
+    <mj-text align="center" font-size="32px" color="#0E5FE3">$1560.00</mj-text>
+    </mj-column>
+  </mj-section>
+
+  <message>
+    <p style="text-align: center; margin-top: 0">You can preview the details or pay online with your debit or credit card.</p>
+  </message>
+  
+  <!-- Button Section-->
+  <mj-include path="./elements/buttons-section.mjml" />
+  <!-- End of Button Section-->
+  <!-- End of Balance Due Section-->
+
+  <!-- <message>
+  <p>Kind regards,<br/>Laura Tamar</p>
+  <p>Morgan + English</p>
+  <p style="color: #0E5FE3;">T: 02-201-392-12<br/>E: thomas.anderson@morganenglish.com.au<br/>A: 23 Kent St, Sydney NSW 2000 Australia</p>
+  </message> -->
+   <!-- Footer -->
+    <mj-include path="./elements/footer-section.mjml" />
+    <mj-include path="./elements/footer-helper-section.mjml" />
+  <!-- End of Footer -->
+<mj-include path="../../partials/body-end.mjml" />

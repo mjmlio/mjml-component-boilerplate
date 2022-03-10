@@ -1,0 +1,6 @@
+<mj-section background-color="#fff" padding="0 15px 0 15px" border-radius="8px 8px 0 0">
+  <mj-column width="480px">
+    <mj-image alt="{{firmName}}" padding='25px 0 25px 0' width="230px" src="https://cdn.leap.com.au/gui/brand-assets/lawconnect/logos/lawconnect-logo@2x.png" />
+    <mj-divider border-width="1px" border-color="lightgrey" padding="0px 15px" />
+  </mj-column>
+</mj-section>

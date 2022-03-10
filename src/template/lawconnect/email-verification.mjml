@@ -1,0 +1,29 @@
+<mjml>
+  <mj-head>
+    <mj-title>Please verify your email address</mj-title>
+    <mj-include path="../../partials/head-lawconnect.mjml" />
+  </mj-head>
+  <mj-include path="../../partials/body-start.mjml" />
+  <!-- Header -->
+    <header theme="lawconnect"/>
+  <!-- Header -->
+  <!-- Heading -->
+    <heading text="Welcome to LawConnect!" />
+  <!-- End of Heading -->
+  <!-- Message -->
+    <message>
+      <p>Hi <strong>{FirstName} {LastName}</strong>,</p>
+      <p>
+        hank you for signing up. Please verify your email address by clicking the following link:
+      </p>
+    </message>
+  <!-- End of Message -->
+  <!-- Primary Button -->
+    <button noPaddingTop="false">
+      Verify My Email
+    </button>
+  <!-- End of Primary Button -->
+  <!-- Footer -->
+    <footer theme="lawconnect" />
+  <!-- End of Footer -->
+<mj-include path="../../partials/body-end.mjml" />

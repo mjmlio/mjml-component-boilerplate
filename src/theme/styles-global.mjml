@@ -1,0 +1,176 @@
+<!-- Non-Responsive Styles -->
+<mj-style inline="inline">
+  body {
+    background-color: #f3f3f3;
+  }
+  .bg-white {
+    background-color: #ffffff;
+  }
+  .bg-primary {
+    background-color: #eeeeee;
+  }
+  .bordered {
+    border: 1px solid #d8d8d8;
+  }
+  .border-top {
+    border-top: 1px solid #d8d8d8;
+  }
+  .border-bottom {
+    border-bottom: 1px solid #d8d8d8;
+  }
+  .border-radius-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .border-radius-bottom {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  /* Type */
+  h1, h4, p {
+    margin: 30px auto 0;
+  }
+  .margin-top-0 {
+    margin-top: 0px;
+  }
+  h1 {
+    font-size:22px;
+    text-align:center;
+    line-height: 28px;
+  }
+  h5, h6 {
+    margin: 0 auto;
+  }
+  h6 {
+    font-size: 11px;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-normal {
+    font-weight: normal;
+  }
+  .text-italic {
+    font-style: italic;
+  }
+  del, .text-muted {
+    color: #aab0b8;
+  }
+  .text-gray {
+    color: #6b6b6b;
+  }
+  .line-height-0 {
+    line-height: 0;
+  }
+  /* Table */
+  table {
+    font-family:Open Sans, Helvetica, Arial, sans-serif;
+    font-size:15px;
+    table-layout:auto;
+  }
+
+  /* Buttons */
+  .btn {
+    font-family: Open Sans, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    padding: 12px 30px;
+    border: 1px solid #ffffff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+  .btn-sm {
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+  .btn-wrapper {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #ffffff;
+  }
+  .btn-full-width {
+    margin: auto;
+  }
+  /* Padding */
+  .padding-v-30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .padding-v-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .padding-h-30 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .padding-h-10 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Margin */
+  .margin-top-10 {
+    margin-top: 10px;
+  }
+  .margin-v-10 {
+    margin: 10px auto 10px auto;
+  }
+
+  /*  Doc Width */
+  .doc-image-wrapper {
+    width:36px!important;
+    vertical-align:top;
+    display:inline-block;
+    width:100%;
+  }
+  .doc-image-outlook-fix {
+    display:block;
+    outline:none;
+    text-decoration:none;
+    width:100%;
+    height:auto;
+  }
+
+  /* Annotation */
+  .annotation-initial-wrapper {
+    margin-top:6px;
+    border-radius:100%;
+    width: 32px;
+    height: 32px;
+    font-weight: bold;
+  }
+
+</mj-style>
+<!-- Responsive Styles -->
+<mj-style>
+  /* Button */
+  .btn {
+    display: inline-block;
+  }
+  @media screen and (max-width: 480px) {
+    .btn-full-width {
+      width: 100%;
+    }
+    .btn-full-width .btn {
+      display:block;
+    }
+  }
+
+  @media screen and (min-width: 480px) {
+    .btn-align-right table {
+      margin-left: auto;
+      margin-right: 0;
+    }
+    .btn-align-left table {
+      margin-right: auto;
+      margin-left: 0;
+    }
+  }
+</mj-style>

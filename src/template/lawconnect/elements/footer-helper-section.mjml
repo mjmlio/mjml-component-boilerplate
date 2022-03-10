@@ -1,0 +1,11 @@
+<mj-section padding-top="0" padding-bottom="0">
+  <mj-column width="480px">
+    <mj-text>
+    <h5 class="text-center text-normal text-muted line-height-22"><a class="padding-h-10" href="https://community.lawconnect.com/s/">Help</a>
+    |
+    <a class="padding-h-10" href="https://lawconnect.com.au/terms-and-conditions">Terms & Conditions</a></h5>
+    </mj-text>
+    <mj-divider border-width="1px" border-color="lightgrey" padding="0px 15px" />
+    <mj-image alt="Powered by LawConnect" padding='15px 0 15px 0' width="100px" src="https://app.test.lawconnect.com.au/assets/images/lawconnect/powerby-lawconnect.svg" />
+  </mj-column>
+</mj-section>

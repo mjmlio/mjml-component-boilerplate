@@ -18,6 +18,14 @@ const walkSync = (dir, filelist = []) => {
 
 const watchedComponents = walkSync('./components')
 
+const buildEmail = filename => {
+  fs.readFile(path.normalize('./src/' + filename + '.mjml'), 'utf8', (err, data) => {
+    if (err) throw err
+    const result = mjml2html(data)
+    fs.writeFileSync(path.normalize('./dist/' + filename + '.html'), result.html)
+  })
+}
+
 const compile = () => {
   return gulp
     .src(path.normalize('components/**/*.js'))
@@ -38,6 +46,17 @@ const compile = () => {
         const result = mjml2html(data)
         fs.writeFileSync(path.normalize('./index.html'), result.html)
       })
+
+      buildEmail('index') // index.mjml
+      
+       buildEmail('email-verification')
+      // buildEmail('activateAccount')
+      // buildEmail('cancellation') 
+      // buildEmail('order')
+      // buildEmail('recurringOrder')
+      // buildEmail('recurringPaymentFailed')
+      // buildEmail('resetPassword')
+      // buildEmail('welcome')
     })
 }
 
@@ -45,5 +64,5 @@ gulp.task('build', compile)
 
 gulp.task('watch', () => {
   compile()
-  return watch([path.normalize('components/**/*.js'), path.normalize('index.mjml')], compile)
+  return watch([path.normalize('components/**/*.js'), path.normalize('src/*.mjml'), path.normalize('index.mjml')], compile)
 })

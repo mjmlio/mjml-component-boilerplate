@@ -1,0 +1,27 @@
+<mjml>
+  <mj-head>
+    <mj-title>{FirstName} {LastName}, All signers have signed the following document.</mj-title>
+    <mj-include path="../../partials/head-lawconnect.mjml" />
+  </mj-head>
+  <mj-include path="../../partials/body-start.mjml" />
+  <!-- Header -->
+    <header theme="lawconnect"/>
+  <!-- Header -->
+  <!-- Message -->
+    <message>
+      <p>Hi <strong>{FirstName} {LastName}</strong>,</p>
+      <p>
+        All signers have signed the following document. the document has been completed.
+      </p>
+    </message>
+  <!-- End of Message -->
+  <!-- List Component -->
+  <mj-include path="../../components/list/start.mjml" />
+    <list-item icon="doc" name="Document-Title.extention" showBtn="true" btnText="View" link="#"/>
+    <list-item icon="pdf" name="Document-Title.extention" showBtn="true" btnText="View" link="#"/>
+  <mj-include path="../../components/list/end.mjml" />
+  <!-- End of List Component -->
+  <!-- Footer -->
+    <footer theme="lawconnect" />
+  <!-- End of Footer -->
+<mj-include path="../../partials/body-end.mjml" />

@@ -1,0 +1,8 @@
+<mj-section background-color="#fff">
+  <mj-column>
+    <mj-button href="#replaceUrl" css-class="btn-align-right" background-color="#0E5FE3" color="#fff" font-size="16px" padding="16px 10px">Pay Online</mj-button>
+  </mj-column>
+  <mj-column>
+    <mj-button href="#replaceUrl" css-class="btn-align-left btn-outline" background-color="#fff" color="#0E5FE3" font-size="16px" padding="16px 10px">View Invoice</mj-button>
+  </mj-column>
+</mj-section>

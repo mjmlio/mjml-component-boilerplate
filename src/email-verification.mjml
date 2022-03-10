@@ -1,12 +1,23 @@
 <mjml>
+  <mj-head>
+    <mj-title>Please verify your email address</mj-title>
+    <mj-include path="../../partials/head-lawconnect.mjml" />
+  </mj-head>
   <mj-body>
-
+  <!-- Header -->
+    <header theme="lawconnect"/>
+  <!-- Header -->
+  <!-- Heading -->
+    <heading text="Welcome to LawConnect!" />
+  <!-- End of Heading -->
     <!-- The first component, mj-basic-component renders as a column child -->
     <mj-section>
       <mj-column>
         <mj-basic-component color="green">
-          I'm among stars!!
+          I'm among stars!
+          
         </mj-basic-component>
+        
       </mj-column>
     </mj-section>
 

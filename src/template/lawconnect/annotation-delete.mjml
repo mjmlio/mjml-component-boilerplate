@@ -1,0 +1,37 @@
+<mjml>
+  <mj-head>
+    <mj-title>@Model.Sender.FirstName @Model.Sender.LastName delete an annotation in the following document</mj-title>
+    <mj-include path="../../partials/head-lawconnect.mjml" />
+  </mj-head>
+  <mj-include path="../../partials/body-start.mjml" />
+  <!-- Header -->
+    <header theme="lawconnect"/>
+  <!-- Header -->
+  <!-- Message -->
+    <message>
+      <p>Hi <strong>{FirstName} {LastName}</strong>,</p>
+      <p>
+        @Model.Sender.FirstName @Model.Sender.LastName from @Model.FirmName delete an annotation in the following document.
+      </p>
+    </message>
+  <!-- End of Message -->
+  <!-- List Component -->
+  <mj-include path="../../components/list/start.mjml" />
+    <list-item icon="doc" name="Document-Title.extention" showBtn="true" btnText="View" link="#"/>
+  <mj-include path="../../components/list/end.mjml" />
+  <!-- End of List Component -->
+  <!-- Annotation Component -->
+    <annotation initial='EH'>
+      <h4 class="margin-top-0">Asher Smith</h4>
+      <h6 class="text-normal text-muted">
+        29 Jun 2017, 10:00am
+      </h6>
+      <p class="margin-v-10 text-italic">
+        <del>Deleted Annotation Text or Deleted Comment TextDeleted Annotation Text or Deleted Comment TextDeleted Annotation Text or Deleted Comment TextDeleted Annotation Text or Deleted Comment Text</del>
+      </p>
+    </annotation>
+  <!-- End of Annotation Component -->
+  <!-- Footer -->
+    <footer theme="lawconnect" />
+  <!-- End of Footer -->
+<mj-include path="../../partials/body-end.mjml" />
