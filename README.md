@@ -4,7 +4,7 @@ A boilerplate to quickly get started when creating your own component.
 
 3 examples can be found in */components*. Each of them introduce new features, so they should be checked in this order : MjBasicComponent, MjImageText, MjLayout.
 
-For more complex examples, have a look at standard MJML components code such as [mj-carousel](https://github.com/mjmlio/mjml/tree/master/packages/mjml-accordion).
+For more complex examples, have a look at standard MJML components code such as [mjml-carousel](https://github.com/mjmlio/mjml/tree/master/packages/mjml-carousel).
 
 ## Getting started
 
